@@ -6,10 +6,20 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Jun 2020 19:40:09 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2020 20:13:43 +0800</lastBuildDate>
     
 	<atom:link href="dongwt96.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>剑指offer 剪绳子</title>
+      <link>dongwt96.github.io/post/blog_0626/</link>
+      <pubDate>Fri, 26 Jun 2020 20:13:43 +0800</pubDate>
+      
+      <guid>dongwt96.github.io/post/blog_0626/</guid>
+      <description>剑指offer 剪绳子 刚搭建好了博客，写下近况吧 最近把大话数据结构看了两遍，然后开始刷剑指offer，剑指offer我买的也有书，买之前就很好奇书和牛客网那个有什么区别，然后在网上搜，百度果然不给力，搜不到，之后还是在豆瓣上看的书评，自己总结了下，牛客网上主要是题，而书会有面经，对于我来说权威的面经正适合我，然后再到牛客网上刷题。 这本书里主要用C++实现，我最开始学的是C，看这个开始能看得懂的，看到面试题的时候，我觉得看了题思路就会定型，之后做题就会缺少思考，然后我就跑到牛客网开始敲题做的第一道是剪绳子 题目： 给你一根长度为n的绳子，请把绳子剪成整数长的m段（m、n都是整数，n&amp;gt;1并且m&amp;gt;1，m&amp;lt;=n），每段绳子的长度记为k[1],&amp;hellip;,k[m]。请问k[1]x&amp;hellip;xk[m]可能的最大乘积是多少？例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段，此时得到的最大乘积是18。
+看到这道题是懵的，没有思路，然后看提示说知识点是：贪心算法，我还是懵的，我把大话数据结构看了两遍也没看到有贪心算法，网上搜了下贪心算法：是一种在每一步选择中都采取在当前状态下最好或最优（即最有利）的选择，从而希望导致结果是最好或最优的算法。 看了这个我就发现这不就是图里头算最短路径的方法吗，反正就是分析到每一步呗。 k长 m段 s最大乘积 k 2 m 2 s 1 k 3 m 2 s 2 k 4 m 2 s 4 k 5 m 2 s 6 k 6 m 2 s 9 k 7 m 2 s 12 k 8 m 3 s 18 k 9 m 3 s 27 k 10 m 3 s 36 k 11 m 4 s 54 k 12 m 4 s 71 k 13 m 4 s 108 从上面可以看出 当8米长的时候3段最大，11米长的时候4段最大，可以分析出每段分成3米的时候最大，2 * 2 =4 2 * 3 =6 3 * 3 =9；</description>
+    </item>
     
     <item>
       <title>Blog</title>
