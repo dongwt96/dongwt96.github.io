@@ -3,36 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://dongwt96.github.io/</loc>
+    <loc>http://dongwt96.github.io/</loc>
+    <lastmod>2020-07-13T19:49:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dongwt96.github.io/post/</loc>
+    <lastmod>2020-07-13T19:49:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dongwt96.github.io/post/blog_0713/</loc>
+    <lastmod>2020-07-13T19:49:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dongwt96.github.io/post/blog_0703/</loc>
     <lastmod>2020-07-03T22:03:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dongwt96.github.io/post/</loc>
-    <lastmod>2020-07-03T22:03:07+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dongwt96.github.io/post/blog_0703/</loc>
-    <lastmod>2020-07-03T22:03:07+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dongwt96.github.io/post/blog_0626/</loc>
+    <loc>http://dongwt96.github.io/post/blog_0626/</loc>
     <lastmod>2020-06-26T20:13:43+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dongwt96.github.io/post/blog/</loc>
+    <loc>http://dongwt96.github.io/post/blog/</loc>
     <lastmod>2020-06-26T19:40:09+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dongwt96.github.io/categories/</loc>
+    <loc>http://dongwt96.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>https://dongwt96.github.io/tags/</loc>
+    <loc>http://dongwt96.github.io/tags/</loc>
   </url>
   
 </urlset>
