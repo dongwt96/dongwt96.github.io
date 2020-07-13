@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+hugo建站笔记
+ | Hugo Theme Dream</title>
+
+    
+
+
+  
+  <meta name="author" content="dongwt" />
+  <meta name="description" content="" />
+
+
+
+<meta name="generator" content="Hugo 0.72.0" />
+
+<link rel="canonical" href="http://dongwt96.github.io/post/blog_0714/" />
+
+
+<meta property="og:title" content="hugo建站笔记" />
+<meta property="og:description" content="笔记" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dongwt96.github.io/post/blog_0714/" />
+<meta property="article:published_time" content="2020-07-13T21:36:40+08:00" />
+<meta property="article:modified_time" content="2020-07-13T21:36:40+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="hugo建站笔记"/>
+<meta name="twitter:description" content="笔记"/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+<style>
+  a {
+    color: seagreen !important;
+  }
+</style>
+
+
+
+<style>
+  .inverted a {
+     color: darkseagreen !important;
+  }
+</style>
+
+
+  </head>
+
+  
+  <body style="background: black;">
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'http:\/\/dongwt96.github.io\/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          hugo建站笔记
+          <div class="sub header">@ dongwt · Monday, Jul 13, 2020 · 1 minute read · Update at Jul 13, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>笔记</p>
+<p>hugo new site myblog  //建博客站</p>
+<p>git clone <a href="https://github.com/xxxx">https://github.com/xxxx</a>  //在github上下载一个主题</p>
+<p>hugo server -t (theme) &ndash;buildDrafts   //启动本地web，可以查看写好的博客样式，theme为主题名</p>
+<p>hugo new post/blog.md //建立markdown文件，也可以(hugo new blog.md)</p>
+<p>hugo &ndash;theme=（theme） &ndash;baseUrl=&quot;https://dongwt96.github.io/&rdquo; &ndash;buildDrafts  //将博客部署到github上</p>
+<p>cd public  //public文件夹为要上传的文件夹</p>
+<p>git init  //给文件夹建一个git站</p>
+<p>git add .   //将当前文件夹的所有内容加入暂存区</p>
+<p>git commit -m &ldquo;xxx&rdquo; //将暂存区中的加入本地库，xxx为本次提交的标题</p>
+<p>git remote add origin <a href="https://github.com/xxx">https://github.com/xxx</a> //连接自己的github</p>
+<p>git push -u origin master //将本地库中的文件推到github</p>
+<h2 id="只是重要步骤的笔记跟理解具体细节看视频比较好"><strong>只是重要步骤的笔记跟理解，具体细节看视频比较好</strong></h2>
+<p>之后更新博客步骤,必要步骤为黑体</p>
+<p><em>hugo new post/blog_0713.md  //建立新的笔记本</em></p>
+<p><em>hugo server -t (theme) &ndash;buildDrafts   //启动本地web，可以查看写好的博客</em></p>
+<p><strong>hugo &ndash;theme=（theme） &ndash;baseUrl=&quot;https://dongwt96.github.io/&rdquo; &ndash;buildDrafts  //将博客部署到github上</strong></p>
+<p><strong>cd public  //public文件夹为要上传的文件夹</strong></p>
+<p><strong>git add .   //将当前文件夹的所有内容加入暂存区</strong></p>
+<p><strong>git commit -m &ldquo;xxx&rdquo; //将暂存区中的加入本地库，xxx为本次提交的标题</strong></p>
+<h2 id="git-push--u-origin-master-将本地库中的文件推到github有时候需要登录"><strong>git push -u origin master //将本地库中的文件推到github，有时候需要登录</strong></h2>
+<p>其他问题：<br>
+博客摘要过长，在文章开头之后输入 <!-- raw HTML omitted -->,中间没有空格<br>
+以前的博客要修改，直接在写好的博客里添加删除内容就可以（最开始特别纠结怎么更改，想着要不要把github里的内容全删了，再上传，还好试了下成功了）</p></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+          <a class="ui label">No Tags</a>
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="/img/avatar.jpg">
+      
+    </div>
+
+    <h1 class="ui medium header">dongwt&#39;s blog<div class="sub header" style="margin-top: 0.5rem;"></div>
+    </h1>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="mailto:dongwentao96@gmail.com">
+        <i class=" mail icon" title="email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2016 - 2020 Hugo Theme Dream</p>
+    
+
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'http:\/\/dongwt96.github.io\/'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="mailto:dongwentao96@gmail.com">
+        <i class="large mail icon" title="email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/html2canvas.min.js"></script>
+
+
+    
+  </body>
+</html>
