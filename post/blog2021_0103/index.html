@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-Blog
+设计数据库感想
  | Hugo Theme Dream</title>
 
     
@@ -19,21 +19,21 @@ Blog
 
 <meta name="generator" content="Hugo 0.72.0" />
 
-<link rel="canonical" href="https://dongwt96.github.io/post/blog/" />
+<link rel="canonical" href="https://dongwt96.github.io/post/blog2021_0103/" />
 
 
-<meta property="og:title" content="Blog" />
-<meta property="og:description" content="#start 2020-6-20" />
+<meta property="og:title" content="设计数据库感想" />
+<meta property="og:description" content="mysql数据库类型总结" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://dongwt96.github.io/post/blog/" />
-<meta property="article:published_time" content="2020-06-26T19:40:09+08:00" />
-<meta property="article:modified_time" content="2020-06-26T19:40:09+08:00" />
+<meta property="og:url" content="https://dongwt96.github.io/post/blog2021_0103/" />
+<meta property="article:published_time" content="2021-01-03T13:48:09+08:00" />
+<meta property="article:modified_time" content="2021-01-03T13:48:09+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Blog"/>
-<meta name="twitter:description" content="#start 2020-6-20"/>
+<meta name="twitter:title" content="设计数据库感想"/>
+<meta name="twitter:description" content="mysql数据库类型总结"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -85,13 +85,35 @@ Blog
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
-          Blog
-          <div class="sub header">@ dongwt · Friday, Jun 26, 2020 · 1 minute read · Update at Jun 26, 2020</div>
+          设计数据库感想
+          <div class="sub header">@ dongwt · Sunday, Jan 3, 2021 · 1 minute read · Update at Jan 3, 2021</div>
         </h2>
       </header>
-      <article style="margin-top: 2rem;"><p>#start
-2020-6-20</p>
-</article>
+      <article style="margin-top: 2rem;"><p>mysql数据库类型总结</p>
+<p>最近在设计数据库，总结一下工作中的经验。
+真实工作中用到的数据类型跟以前学到的不太一样，以前学的时候，只知道用int、char、double这种与Java长得一样的，但是工作中有更好的选择。<br>
+比如double这种浮点型，在mysql中如果要求高精确度，最好使用decimal，decimal采用的是将数字以字符串形式存储，所以数字在取出来时，不会产生误差，而doudl、float这种计数类的，底层都是采用二进制存储，这就产生了转换问题。<br>
+decimal如果不设置经度默认的是decimal（10，0），是不带有小数部分的，需要自定义小数多少位。decimal在java中对应的类型是BigDecimal，BigDecimal类创建的是对象,不能使用传统的+、-、*、/等算术运算符直接对其进行数学运算，而必须调用其对应的方法：
+public BigDecimal add(BigDecimal augend)：加    <br>
+public BigDecimal subtract(BigDecimal subtrahend)：减     <br>
+public BigDecimal multiply(BigDecimal multiplicand)：乘     <br>
+public BigDecimal divide(BigDecimal divisor)：除     <br>
+public BigDecimal divide(BigDecimal divisor,int scale, int roundingMode)：商，几位小数，舍取模式
+构造 BigDecimal 对象常用以下方法:
+BigDecimal BigDecimal(double d); //不允许使用
+BigDecimal BigDecimal(String s); //常用,推荐使用
+static BigDecimal valueOf(double d); //常用,推荐使用</p>
+<p>实际中char这个类型也基本不用，取而代之的是varchar，这个字符相比char有什么好处呢？
+因为char是定长的字符串，如果你定义为char（255），实际中不足255字符，将会用空格填充，将产生巨大的空间浪费。
+varchar根据实际字符长度来分配存储空间的，用varchar（100）或varchar（200）存储90字符数据，在硬盘上存储空间是一样的，但是对于内存来说，则不是。所以在设计时要根据实际长度分配时间。<br>
+mysql 5.0版本以上，varchar(100)，指的是100字符，无论存放的是数字、字母还是UTF-8汉字（每个汉字3字节），都可以存放100个字符。</p>
+<p>关于int类型，最大的误区就是：int（m），很多人以为这里的 m 就是实际占用的空间，把int（1）当成只能存个位数，把int（20）当成long，其实这里的int只是一个int，占4个字节，这里的 m 只用于显示，当位数少于 m 时，前面补零，最少显示m位。实际中并没有什么用。<br>
+tinyint也有相同的问题，只占一个字节，但是有些细节上的不同：mysql中没有boolean类型，当你定义成bool存储时，mysql是以tinyint（1）来存储的，这就造成了tinyint（1）在java中有可能是boolean类型的，有时候java就会报错。
+解决方案：
+1.将tinyint 类型修改为 tinyint(n) n&gt;1
+2.SQL查询时对该类型的字段进行运算 如 *1 并给个别名
+3.修改配置文件,设置tinyInt1isBit=false：jdbc:mysql://{host:port}/{dbname}?tinyInt1isBit=false (注意大小写)</p>
+<p>设置外键会影响性能，在进行操作时会关联到其他表，因此有可能造成死锁。所以很多数据库设计都不带外键。</p></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
